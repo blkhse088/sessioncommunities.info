@@ -1,0 +1,16 @@
+# Preserve the following files when cleaning the directory:
+
+# Long-term cache
+cache-lt
+
+# Visual Studio Code
+.vscode
+
+# Kate
+.kate-swp
+
+# Custom Doxyfile configuration
+Doxyfile
+
+# Custom content
+custom/**

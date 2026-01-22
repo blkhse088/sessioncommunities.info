@@ -1,0 +1,16 @@
+<?php
+	/**
+	 * \file
+	 * Generate news banner for listing pages.
+	 */
+?>
+<div class="banner">
+	<span class="banner-note">
+		news banner
+	</span>
+	<p class="banner-title">Title</p>
+
+	<p
+		class="banner-subtitle"
+	>Description with <a href="#" title="sample link">link</a>.</p>
+</div>

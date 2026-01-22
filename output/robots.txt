@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /about/
+Allow: /instructions/
+Allow: /privacy/
+Disallow: /qr-codes/
+Sitemap: https://sessioncommunities.online/sitemap.xml

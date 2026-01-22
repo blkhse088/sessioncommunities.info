@@ -1,0 +1,8 @@
+# /etc/systemd/system/sessioncommunities.service
+[Unit]
+Description=Session Communities aggregator
+
+[Service]
+### User=$USER
+### WorkingDirectory=$PROJECT
+ExecStart=/usr/bin/sh -c "/usr/bin/php php/update-all.php --verbose --archive --no-color 2>&1 | /usr/bin/tee sessioncommunities.log"

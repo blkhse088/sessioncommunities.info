@@ -1,0 +1,63 @@
+#!/bin/sh
+
+root="$(pwd)"
+branch=$(git symbolic-ref HEAD 2>/dev/null || echo "?")
+branch="${branch##refs/heads/}"
+
+# Only test changes on main branch
+if ! [ "$branch" = "main" ]; then
+    exit 0;
+fi
+
+# Trigger cleanup if tests are interrupted.
+cleanup() {
+    printf "\033[31mTests aborted.\033[0m\n";
+    rm -rf "$root/.test";
+    exit;
+}
+
+trap cleanup HUP INT ABRT TERM;
+
+cat <<EOF
+I see you've committed to $branch! Time to test.
+(Press ^C to abort.)
+
+EOF
+
+# Remove test directory if present.
+rm -rf "$root/.test"
+
+# Make and change into test directory.
+mkdir "$root/.test" || exit;
+cd "$root/.test" || exit;
+
+# Clone the current repository into the test directory and change into it.
+git clone .. repo 2>> "$root/.test/results"
+cd "$root/.test/repo" 2>> "$root/.test/results" || exit;
+
+touch "$root/.test/results";
+
+# Run tests and show certain lines of output if successful.
+if make test-ci > "$root/.test/results" 2>&1; then
+    grep 'Done fetching communities' -A1 --color=no "$root/.test/results";
+	grep -E 'Generated [[:digit:]]+ listings' -B1 --color=no "$root/.test/results";
+    cat <<EOF
+
+$(printf "\033[32m")Tests passed.$(printf "\033[0m")
+
+Run \`make test\` to test the webpage yourself.
+
+EOF
+else
+	# Show end of output if tests were not successful.
+    printf "\033[31mTests failed.\033[0m\n";
+    tail -n10 "$root/.test/results";
+    printf "\nSee %s/.test/results for the full log.\n" "$root"
+    exit 1;
+fi
+
+# Forget the cloned repository has version control to decrease clutter.
+rm -rf "$root/.test/repo/.git" || exit;
+
+# Return to main repository
+cd "$root" || exit;

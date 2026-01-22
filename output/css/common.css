@@ -1,0 +1,15 @@
+/* Dark theme colors (hardcoded) */
+:root {
+	--primary-color:					hsl(0, 0%, 70%);
+	--primary-color-50:					hsla(0, 0%, 70%, 50%);
+	--secondary-color:					hsl(0, 0%, 0%);
+	--secondary-color-heading:				hsl(0, 0%, 0%);
+	--secondary-color-shaded:				hsl(0, 0%, 0%);
+	--anchor-color:						hsl(152, 100%, 35%);
+	--link-color:						hsl(152, 100%, 35%);
+	--link-color-hover:					hsl(152, 100%, 45%);
+	--color-http:						hsl(0, 0%, 80%);
+	--color-https:						hsl(195, 53%, 79%);
+}
+
+:root { text-underline-offset: 0.25em; }

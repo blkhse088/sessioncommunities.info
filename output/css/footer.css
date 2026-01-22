@@ -1,0 +1,43 @@
+footer, aside {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100%;
+	text-align: center;
+	font-size: 0.85em;
+}
+
+aside:not(#summary):first-of-type {
+	margin-top: 2em;
+	padding-top: 2em;
+	border-top: 1px var(--primary-color) solid;
+}
+
+aside p {
+	max-width: 60em;
+	margin: .5em;
+	text-align: center;
+}
+
+footer:first-of-type {
+	margin-block-start: 1em;
+}
+
+.footer__nav-target {
+	display: inline-block;
+	padding: .5em;
+	margin-inline: .1em;
+	margin-block: .1em;
+	min-width: 3em;
+	white-space: nowrap;
+}
+
+footer#author {
+	align-self: stretch;
+}
+
+#footer__author {
+	align-self: flex-end;
+	padding: 0em 2em;
+}
+

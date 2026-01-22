@@ -1,0 +1,24 @@
+.banner {
+	position: relative;
+	box-sizing: border-box;
+	align-self: stretch;
+	margin: 0 1rem 0.5rem;
+	border-left: var(--primary-color) 1rem solid;
+	padding-inline: 1rem;
+	text-align: center;
+}
+
+.banner-title {
+	font-size: 1.5rem;
+}
+
+.banner-subtitle {
+	font-size: 1.25rem;
+}
+
+.banner-note {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	opacity: 0.5;
+}

@@ -1,0 +1,81 @@
+header {
+  text-align: center;
+}
+
+label[for^=language-selection_] {
+  font-size: 1.2em;
+  padding-right: 0.5em;
+  padding-block: 0.5em;
+}
+
+.language-selection {
+  width: 2em;
+  height: 2em;
+  padding-left: 0.5em;
+  padding-block: 0.5em;
+}
+
+#instructions {
+  padding: 1em;
+}
+
+.instructions {
+  display: none;
+  /* Inconsistent with rest of content */
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.25em;
+  line-height: 1.5;
+  padding: 2em;
+  background-color: hsl(0, 0%, 9%);
+  border: 2px solid black;
+  border-radius: 1em;
+}
+
+#link-return {
+	text-align: right;
+}
+
+#instructions-image {
+	background: linear-gradient(to bottom right, lightgray, gray);
+	background: url("/assets/img/instructions/instructions.webp");
+	aspect-ratio: 1200 / 630;
+	background-repeat: no-repeat;
+	background-position: bottom 20% left 50%;
+	background-size: calc(clamp(400px, 100%, 750px));
+	max-width: 750px;
+	margin-inline: auto;
+	box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+}
+
+@media (max-width: 750px) {
+	#language-selection-title {
+		width: 100%;
+	}
+
+	#language-selection-title label {
+		display: inline-flex;
+		justify-content: space-between;
+		width: 100%;
+		cursor: pointer;
+	}
+
+	#language-selection-show:not(:checked) ~ :is(.language-selection, .language-selection-label) {
+		display: none;
+	}
+
+	#language-selection-title label::after {
+		content: "+";
+		padding-inline: 0.5em;
+	}
+
+	#language-selection-show:checked ~ #language-selection-title label::after {
+		content: "−";
+	}
+
+	label[for^=language-selection] {
+		display: inline-block;
+		width: calc( 100% - 3em );
+	}
+}

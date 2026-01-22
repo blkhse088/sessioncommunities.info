@@ -1,0 +1,3935 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Questions? Groups for SimpleX, Session, XMPP | Simplified Privacy</title>
+<link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body>
+  <header>
+    <style>
+    .header {
+    display: flex;
+    grid-template-columns: 400px auto;
+    height: 90px;
+    flex-direction: row;
+    align-items: center;  
+    padding: 10px;  
+    border-bottom: 1px solid #ccc;  
+
+}
+
+.hd1 h1 {
+    width: 350px;
+    display: flex;
+    font-size: 30pt;
+}
+.hd2{
+    width: 100%;
+}
+.hd2-2{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    width: auto;
+    justify-content: right;
+    margin-right: 10px;
+
+}
+
+
+.hd2-1 li:hover {
+    text-decoration: none;  
+    color: rgb(0, 4, 255);  
+}
+
+ 
+@media (max-width: 850px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 9px;
+        height: 130px;
+
+    }
+    .hd2-2{
+        display: flex;
+        list-style-type: none;
+        width: 100%;
+        flex-wrap: wrap;
+        gap:10px 40px;
+
+        justify-content: center;          
+    }
+
+    .hd1 h1 {
+        font-size: 26pt;
+        justify-content: center;
+    }
+}
+
+</style>
+<div class="header">
+    <div class="hd1">
+        <h1><a href="../index.html">Simplified Privacy</a></h1>
+    </div>
+    <div class="hd2">   
+        <nav class="hd2-1">
+
+            <ul class="hd2-2">
+                
+                    <li><a href="https://hydraveil.net">HydraVeil</a></li>
+                
+                    <li><a href="https://vpn.simplifiedprivacy.com">VPN</a></li>
+                
+                    <li><a href="https://docs.simplifiedprivacy.com">Docs</a></li>
+                
+                    <li><a href="../arweave/interactive-self-sovereign-video-site-links.html">Video</a></li>
+                
+                    <li><a href="https://podcast.simplifiedprivacy.com">Podcast</a></li>
+                
+                    <li><a href="../products.html">Products</a></li>
+                
+                    <li><a href="../contact.html">Contact</a></li>
+                
+                    <li><a href="../about-us.html">About Us</a></li>
+                
+            </ul>
+        </nav>
+    </div> 
+</div>
+
+
+
+
+
+
+  </header>
+  <main>
+    
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+
+  pre {
+    font-family: 'Courier New', Courier, monospace;
+     
+    background-color: #222;
+     
+    color: #0a920a;
+     
+    padding: 10px;
+     
+    border-radius: 15px;
+     
+    overflow-x: auto;
+     
+    white-space: pre-wrap;
+     
+    word-wrap: break-word;
+     
+  }
+
+  .single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 50px;
+  }
+
+  .scard-container a {
+    color: rgb(19, 182, 208);
+  }
+
+  .scard-container p {
+    font-size: 12pt;
+     
+    font-family: 'roboto-regular';
+  }
+
+  .scard-container h1 {
+    font-size: 22pt;
+     
+    font-family: 'roboto-bold';
+  }
+
+  .scard-container h2 {
+    font-size: 16pt;
+     
+    font-family: 'roboto-bold';
+  }
+
+  .scard-container h3 {
+    font-size: 13pt;
+     
+    font-family: 'roboto-bold';
+  }
+
+  .scard-container a:hover {
+    color: rgb(27, 27, 253);
+  }
+
+  .single-container {
+    max-width: 750px;
+    min-width: 300px;
+  }
+
+  .scard-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+    word-break: break-word;
+  }
+
+  .scard-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    border-radius: 6px;
+  }
+
+  .scard-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    border-radius: 6px;
+  }
+
+  .scard-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .single-container-2 {
+    margin-top: 30px;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .single-container-2 h1 {
+    text-align: center;
+  }
+
+  .disclaimer h3 {
+    font-size: 22pt;
+  }
+
+  .disclaimer h3 a {
+    font-size: 22pt;
+    color: rgb(19, 182, 208);
+  }
+
+  .disclaimer h3 a:hover {
+    color: rgb(27, 27, 253);
+  }
+
+  .single2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .single-more {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text {
+    font-size: 22pt;
+     
+    font-family: 'roboto-bold';
+  }
+</style>
+
+<div class="single">
+  <div class="single-container">
+    <div class="scard-container">
+      <div class="scard-title">
+        <h1>Questions? Groups for SimpleX, Session, XMPP</h1>
+        <h2>Here’s a list of the active Session, SimpleX, and XMPP Public Groups where you can ask questions on tech. </h2>
+      </div>
+      
+      <div class="scard-image">
+        <img src="../posts/private-messegers/questions-groups-for/images/questions-groups.jpg" alt="Questions? Groups for SimpleX, Session, XMPP" />
+      </div>
+      
+      <h1 id="tech-resources">Tech Resources!</h1>
+<br/>
+<p>Here’s a list of the active Session, SimpleX, and XMPP Public Groups where you can ask questions on tech.<br>
+<br/></p>
+<h1 id="session">Session</h1>
+<br/>
+<p>Simplified Privacy Official Group
+<a href="https://session.simplifiedprivacy.is/simplified?public_key=ed33150048005a9237708314785af91f5dfe0d9eafd8a66df6e9977cc9619431">https://session.simplifiedprivacy.is/simplified?public_key=ed33150048005a9237708314785af91f5dfe0d9eafd8a66df6e9977cc9619431</a></p>
+<p>Privacy
+<a href="http://sog.caliban.org/privacy?public_key=118df8c6c471ac0468c7c77e1cdc12f24a139ee8a07c6e3bf4e7855640dad821">http://sog.caliban.org/privacy?public_key=118df8c6c471ac0468c7c77e1cdc12f24a139ee8a07c6e3bf4e7855640dad821</a></p>
+<p>QubesOS
+<a href="http://sogs.cosmicnation.co/qubesos?public_key=c7940d53c81ac95430fd6d4af4a51630a0231218716366110d9fdb3fe5d78966">http://sogs.cosmicnation.co/qubesos?public_key=c7940d53c81ac95430fd6d4af4a51630a0231218716366110d9fdb3fe5d78966</a></p>
+<p>Modern Survival
+<a href="http://sog.caliban.org/modernsurvival?public_key=118df8c6c471ac0468c7c77e1cdc12f24a139ee8a07c6e3bf4e7855640dad821">http://sog.caliban.org/modernsurvival?public_key=118df8c6c471ac0468c7c77e1cdc12f24a139ee8a07c6e3bf4e7855640dad821</a></p>
+<p>GrapheneOS
+<a href="http://sogs.cosmicnation.co/grapheneos?public_key=c7940d53c81ac95430fd6d4af4a51630a0231218716366110d9fdb3fe5d78966">http://sogs.cosmicnation.co/grapheneos?public_key=c7940d53c81ac95430fd6d4af4a51630a0231218716366110d9fdb3fe5d78966</a></p>
+<p>Linux
+<a href="http://sog.caliban.org/linux?public_key=118df8c6c471ac0468c7c77e1cdc12f24a139ee8a07c6e3bf4e7855640dad821">http://sog.caliban.org/linux?public_key=118df8c6c471ac0468c7c77e1cdc12f24a139ee8a07c6e3bf4e7855640dad821</a></p>
+<p>System &amp; Network Security
+<a href="http://sog.caliban.org/security?public_key=118df8c6c471ac0468c7c77e1cdc12f24a139ee8a07c6e3bf4e7855640dad821">http://sog.caliban.org/security?public_key=118df8c6c471ac0468c7c77e1cdc12f24a139ee8a07c6e3bf4e7855640dad821</a></p>
+<p>Tech
+http://116.203.217.101/tech?public_key=2054fa3271f27ec9e55492c85d022f9582cb4aa2f457e4b885147fb913b9c131</p>
+<h1 id="simplex">SimpleX</h1>
+<br/>
+<p>Simplified Privacy Official Group:
+<a href="https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2FenEkec4hlR3UtKx2NMpOUK_K4ZuDxjWBO1d9Y4YXVaA%3D%40smp14.simplex.im%2Fz2BKiaUdB6O7KwOBy4IXGNnz3oWyNss7%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAENfGMNmw6fjxMjNt5GQaj5VYOxeOmVZiDkd3NROiqCU%253D%26srv%3Daspkyu2sopsnizbyfabtsicikr2s4r3ti35jogbcekhm3fsoeyjvgrid.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%222qsQUeR1KhcP3tJuztWwvw%3D%3D%22%7D">https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2FenEkec4hlR3UtKx2NMpOUK_K4ZuDxjWBO1d9Y4YXVaA%3D%40smp14.simplex.im%2Fz2BKiaUdB6O7KwOBy4IXGNnz3oWyNss7%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAENfGMNmw6fjxMjNt5GQaj5VYOxeOmVZiDkd3NROiqCU%253D%26srv%3Daspkyu2sopsnizbyfabtsicikr2s4r3ti35jogbcekhm3fsoeyjvgrid.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%222qsQUeR1KhcP3tJuztWwvw%3D%3D%22%7D</a></p>
+<p>Privacy, Security, Anonymity.
+<a href="https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2FPQUV2eL0t7OStZOoAsPEV2QYWt4-xilbakvGUGOItUo%3D%40smp6.simplex.im%2F3EDHk8oiLEW-IxrKACWNCv9YVO7JiLyy%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAGRUp7ar8_M58-dPjBqno1IiWrvKVZ6TEuBWF71f-WWM%253D%26srv%3Dbylepyau3ty4czmn77q4fglvperknl4bi2eb2fdy2bh4jxtf32kf73yd.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22E_qexehgVUGlPv2f3neZPQ%3D%3D%22%7D">https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2FPQUV2eL0t7OStZOoAsPEV2QYWt4-xilbakvGUGOItUo%3D%40smp6.simplex.im%2F3EDHk8oiLEW-IxrKACWNCv9YVO7JiLyy%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAGRUp7ar8_M58-dPjBqno1IiWrvKVZ6TEuBWF71f-WWM%253D%26srv%3Dbylepyau3ty4czmn77q4fglvperknl4bi2eb2fdy2bh4jxtf32kf73yd.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22E_qexehgVUGlPv2f3neZPQ%3D%3D%22%7D</a></p>
+<p>Monero XMR
+<a href="https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2Fh">https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2Fh</a>–vW7ZSkXPeOUpfxlFGgauQmXNFOzGoizak7Ult7cw%3D%40smp15.simplex.im%2FEmRhJbsEq3sHw2_i7mA92BY545Y5RvNd%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAp94qy7ZhPEgIBpymfG8-aPHDC9EJ4nSvMLXjCWxMx3Q%253D%26srv%3Doauu4bgijybyhczbnxtlggo6hiubahmeutaqineuyy23aojpih3dajad.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22-_hQq6m3Xk-cdQIiwmSDHw%3D%3D%22%7D</p>
+<p>Bitcoin &amp; Lightning Network
+<a href="https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2Fu2dS9sG8nMNURyZwqASV4yROM28Er0luVTx5X1CsMrU%3D%40smp4.simplex.im%2F6dNk57UTVN7EF6r1O9LaOyI9Opx7Az9s%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEASuPrFrvyC44b-tgZpEu5dfDhN2HX1kKLOzIoR8UrBzY%253D%26srv%3Do5vmywmrnaxalvz6wi3zicyftgio6psuvyniis6gco6bp6ekl4cqj4id.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22GvuLoG20itjrTh8rVzR8Ig%3D%3D%22%7D">https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2Fu2dS9sG8nMNURyZwqASV4yROM28Er0luVTx5X1CsMrU%3D%40smp4.simplex.im%2F6dNk57UTVN7EF6r1O9LaOyI9Opx7Az9s%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEASuPrFrvyC44b-tgZpEu5dfDhN2HX1kKLOzIoR8UrBzY%253D%26srv%3Do5vmywmrnaxalvz6wi3zicyftgio6psuvyniis6gco6bp6ekl4cqj4id.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22GvuLoG20itjrTh8rVzR8Ig%3D%3D%22%7D</a></p>
+<p>privacy security anonymity group of Switzerland
+<a href="https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2FPQUV2eL0t7OStZOoAsPEV2QYWt4-xilbakvGUGOItUo%3D%40smp6.simplex.im%2FFHiv5_94tP8wxeva32KO7c0sCPa_ojcx%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEA3IWe4TzZs7Y306h07xE1B-_T6pv70OBqWKpvdrP3vQ4%253D%26srv%3Dbylepyau3ty4czmn77q4fglvperknl4bi2eb2fdy2bh4jxtf32kf73yd.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22Gx96MuO6PFtVeL9zWJ0zFA%3D%3D%22%7D">https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2FPQUV2eL0t7OStZOoAsPEV2QYWt4-xilbakvGUGOItUo%3D%40smp6.simplex.im%2FFHiv5_94tP8wxeva32KO7c0sCPa_ojcx%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEA3IWe4TzZs7Y306h07xE1B-_T6pv70OBqWKpvdrP3vQ4%253D%26srv%3Dbylepyau3ty4czmn77q4fglvperknl4bi2eb2fdy2bh4jxtf32kf73yd.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22Gx96MuO6PFtVeL9zWJ0zFA%3D%3D%22%7D</a></p>
+<p>Nostr
+<a href="https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2Fhpq7_4gGJiilmz5Rf-CswuU5kZGkm_zOIooSw6yALRg%3D%40smp5.simplex.im%2FRlICV6V4cT9grtbkuZnOffCcuZgFqTsr%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAru">https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2Fhpq7_4gGJiilmz5Rf-CswuU5kZGkm_zOIooSw6yALRg%3D%40smp5.simplex.im%2FRlICV6V4cT9grtbkuZnOffCcuZgFqTsr%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAru</a>–JZy-eVm8KjE3K9U9U4Wwk-xBaiKy-_1xeOcy_RQ%253D%26srv%3Djjbyvoemxysm7qxap7m5d5m35jzv5qq6gnlv7s4rsn7tdwwmuqciwpid.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22C6CH60nh8xeM4-7rto19Ug%3D%3D%22%7D</p>
+<p>Nostriches
+<a href="https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2FPQUV2eL0t7OStZOoAsPEV2QYWt4-xilbakvGUGOItUo%3D%40smp6.simplex.im%2Fj5M4aet7oFpiw8xKG4YMql6PihNA2qRW%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAkXpa1gSjfzbmUxMJQRie79owG3NZH3P1vAyzNbAK3zs%253D%26srv%3Dbylepyau3ty4czmn77q4fglvperknl4bi2eb2fdy2bh4jxtf32kf73yd.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22rqMPdqj4SuWTbiGL5frnxA%3D%3D%22%7D">https://simplex.chat/contact#/?v=1-4&amp;smp=smp%3A%2F%2FPQUV2eL0t7OStZOoAsPEV2QYWt4-xilbakvGUGOItUo%3D%40smp6.simplex.im%2Fj5M4aet7oFpiw8xKG4YMql6PihNA2qRW%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAkXpa1gSjfzbmUxMJQRie79owG3NZH3P1vAyzNbAK3zs%253D%26srv%3Dbylepyau3ty4czmn77q4fglvperknl4bi2eb2fdy2bh4jxtf32kf73yd.onion&amp;data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22rqMPdqj4SuWTbiGL5frnxA%3D%3D%22%7D</a>
+<br/></p>
+<h1 id="xmpp">XMPP:</h1>
+<br/>
+<p>Simplified Privacy Official Group:
+<a href="mailto:simplifiedprivacy@subscribe.simplifiedprivacy.is">simplifiedprivacy@subscribe.simplifiedprivacy.is</a><br>
+<br/></p>
+<p>Privacy &amp; Security:
+<a href="mailto:privacy-and-security@muc.loqi.im">privacy-and-security@muc.loqi.im</a><br>
+<br/></p>
+<p>Linux:
+<a href="mailto:angrytux@conference.trashserver.net">angrytux@conference.trashserver.net</a><br>
+<br/></p>
+<p>Snikket (learn about XMPP)
+<a href="mailto:general@channels.snikket.org">general@channels.snikket.org</a><br>
+<br/></p>
+<p>Soprani (learn about XMPP)
+<a href="mailto:discuss@conference.soprani.ca">discuss@conference.soprani.ca</a><br>
+<br/></p>
+
+      <div class="disclaimer">
+        <br>
+        <h3>If you really want to learn and take your privacy to the next level, Learn about <a
+            href="../why/this-vpn-browser-combo.html">HydraVeil</a>,
+          <a href="https://vpn.simplifiedprivacy.com">Access our VPN</a>, and subscribe to our new content via:
+          <a href="../arweave-tutorial/how-and-why.html">Arweave Video RSS, </a>
+          <a href="https://podcast.simplifiedprivacy.com">Podcast RSS, </a>
+          <a href="../uncensored/index.html">Session list,</a>
+          <a href="../nostr/index.html">Nostr,</a>
+          <a href="https://bastyon.com/SimplifiedPrivacy">Bastyon,</a>
+          <a href="../index.xml">Article RSS, </a> or join the
+          <a href="../contact/signal.html">Signal Group</a>
+        </h3>
+      </div>
+    </div>
+    <div class="single2">
+      <h3 class="text">Related Posts</h3>
+      <div class="single-more">
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+         
+         
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+         
+         
+         
+        
+        
+        
+        
+        
+         
+         
+        <style>
+    .card {
+        display: flex;
+        align-items: stretch;  
+        width: 100%;  
+        min-height: 150px;
+        max-height: 350px;
+        border: 1px solid rgba(0, 0, 0, 0.1);  
+        padding: 15px;  
+        box-sizing: border-box;  
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+        border-radius: 8px;  
+        text-decoration: none;  
+    }
+
+.card-image {
+    width: 320px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;  
+    border-radius: 6px;
+}
+
+.card-content {
+        flex: 1;  
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-between;
+}
+
+.card-title {
+        margin-bottom: 10px;  
+}
+
+.card-title a {
+        text-decoration: none;  
+        color: rgb(27, 27, 253);
+}
+
+.card-description {
+        flex-grow: 1;  
+        margin-bottom: 10px;  
+        color: rgb(54, 54, 54);
+}
+
+.card-info {
+        display: flex;
+        flex-direction: row;  
+        justify-content: center;
+        font-size: 8pt;
+        gap: 15px;  
+        padding: 5px;  
+        border-top: 1px solid rgba(0, 0, 0, 0.1);  
+        border-radius: 0 0 8px 8px;  
+        color: rgb(54, 54, 54);
+
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+            flex-direction: column;  
+            align-items: center;  
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card-image {
+            height: 150px;  
+            width: 266px;  
+}
+    }
+</style>
+
+<a href="../which-freedom-tech/is-better-at-what.html" class="card">
+    <div class="card-image">
+        
+        <img src="../posts/general-privacy/better-for-what/images/fruits-scale.jpg" alt="Stop asking which is better" />
+    
+    </div>
+    <div class="card-content">
+        <div class="card-title">
+            <h2>Stop asking which is better</h2>
+        </div>
+        <div class="card-description">
+            <p>Instead ask: Which is better at what?</p>
+        </div>
+        <div class="card-info">
+            <p>[SP]</p>
+            <p>Apr 20, 2025</p>
+        </div>
+    </div>
+</a>
+
+
+         
+        <style>
+    .card {
+        display: flex;
+        align-items: stretch;  
+        width: 100%;  
+        min-height: 150px;
+        max-height: 350px;
+        border: 1px solid rgba(0, 0, 0, 0.1);  
+        padding: 15px;  
+        box-sizing: border-box;  
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+        border-radius: 8px;  
+        text-decoration: none;  
+    }
+
+.card-image {
+    width: 320px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;  
+    border-radius: 6px;
+}
+
+.card-content {
+        flex: 1;  
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-between;
+}
+
+.card-title {
+        margin-bottom: 10px;  
+}
+
+.card-title a {
+        text-decoration: none;  
+        color: rgb(27, 27, 253);
+}
+
+.card-description {
+        flex-grow: 1;  
+        margin-bottom: 10px;  
+        color: rgb(54, 54, 54);
+}
+
+.card-info {
+        display: flex;
+        flex-direction: row;  
+        justify-content: center;
+        font-size: 8pt;
+        gap: 15px;  
+        padding: 5px;  
+        border-top: 1px solid rgba(0, 0, 0, 0.1);  
+        border-radius: 0 0 8px 8px;  
+        color: rgb(54, 54, 54);
+
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+            flex-direction: column;  
+            align-items: center;  
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card-image {
+            height: 150px;  
+            width: 266px;  
+}
+    }
+</style>
+
+<a href="../trump-signal/why-xmpp-is-better.html" class="card">
+    <div class="card-image">
+        
+        <img src="../posts/private-messegers/signal-vs-xmpp/images/trump-xmpp.jpg" alt="Why XMPP is Better Than Signal" />
+    
+    </div>
+    <div class="card-content">
+        <div class="card-title">
+            <h2>Why XMPP is Better Than Signal</h2>
+        </div>
+        <div class="card-description">
+            <p>Trump&#39;s Signal leak is a great time to educate you on XMPP</p>
+        </div>
+        <div class="card-info">
+            <p>[SP]</p>
+            <p>Mar 27, 2025</p>
+        </div>
+    </div>
+</a>
+
+
+         
+        <style>
+    .card {
+        display: flex;
+        align-items: stretch;  
+        width: 100%;  
+        min-height: 150px;
+        max-height: 350px;
+        border: 1px solid rgba(0, 0, 0, 0.1);  
+        padding: 15px;  
+        box-sizing: border-box;  
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+        border-radius: 8px;  
+        text-decoration: none;  
+    }
+
+.card-image {
+    width: 320px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;  
+    border-radius: 6px;
+}
+
+.card-content {
+        flex: 1;  
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-between;
+}
+
+.card-title {
+        margin-bottom: 10px;  
+}
+
+.card-title a {
+        text-decoration: none;  
+        color: rgb(27, 27, 253);
+}
+
+.card-description {
+        flex-grow: 1;  
+        margin-bottom: 10px;  
+        color: rgb(54, 54, 54);
+}
+
+.card-info {
+        display: flex;
+        flex-direction: row;  
+        justify-content: center;
+        font-size: 8pt;
+        gap: 15px;  
+        padding: 5px;  
+        border-top: 1px solid rgba(0, 0, 0, 0.1);  
+        border-radius: 0 0 8px 8px;  
+        color: rgb(54, 54, 54);
+
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+            flex-direction: column;  
+            align-items: center;  
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card-image {
+            height: 150px;  
+            width: 266px;  
+}
+    }
+</style>
+
+<a href="../protocols-over-pictures/session-arweave-nostr-monero-xmpp.html" class="card">
+    <div class="card-image">
+        
+        <img src="../posts/private-messegers/protocols-over-pictures/images/protocols-over-pictures.png" alt="Crypto-Anarchy 101: Protocols over Pictures" />
+    
+    </div>
+    <div class="card-content">
+        <div class="card-title">
+            <h2>Crypto-Anarchy 101: Protocols over Pictures</h2>
+        </div>
+        <div class="card-description">
+            <p>In 5 minutes, learn the structure of liberty tech.</p>
+        </div>
+        <div class="card-info">
+            <p>[SP]</p>
+            <p>Mar 8, 2025</p>
+        </div>
+    </div>
+</a>
+
+
+         
+        <style>
+    .card {
+        display: flex;
+        align-items: stretch;  
+        width: 100%;  
+        min-height: 150px;
+        max-height: 350px;
+        border: 1px solid rgba(0, 0, 0, 0.1);  
+        padding: 15px;  
+        box-sizing: border-box;  
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+        border-radius: 8px;  
+        text-decoration: none;  
+    }
+
+.card-image {
+    width: 320px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;  
+    border-radius: 6px;
+}
+
+.card-content {
+        flex: 1;  
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-between;
+}
+
+.card-title {
+        margin-bottom: 10px;  
+}
+
+.card-title a {
+        text-decoration: none;  
+        color: rgb(27, 27, 253);
+}
+
+.card-description {
+        flex-grow: 1;  
+        margin-bottom: 10px;  
+        color: rgb(54, 54, 54);
+}
+
+.card-info {
+        display: flex;
+        flex-direction: row;  
+        justify-content: center;
+        font-size: 8pt;
+        gap: 15px;  
+        padding: 5px;  
+        border-top: 1px solid rgba(0, 0, 0, 0.1);  
+        border-radius: 0 0 8px 8px;  
+        color: rgb(54, 54, 54);
+
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+            flex-direction: column;  
+            align-items: center;  
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card-image {
+            height: 150px;  
+            width: 266px;  
+}
+    }
+</style>
+
+<a href="../interview-session-messenger/keejef-vs-simplex.html" class="card">
+    <div class="card-image">
+        
+        <img src="../posts/private-messegers/interview-keejef/images/session-global.png" alt="Interview: KeeJef on Session Messenger Misunderstandings" />
+    
+    </div>
+    <div class="card-content">
+        <div class="card-title">
+            <h2>Interview: KeeJef on Session Messenger Misunderstandings</h2>
+        </div>
+        <div class="card-description">
+            <p>Interview with the developer on one of most censorship resistant tools out there.</p>
+        </div>
+        <div class="card-info">
+            <p>[SP]</p>
+            <p>Mar 4, 2025</p>
+        </div>
+    </div>
+</a>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer>
+    <style>
+.footer1 {
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    flex-direction: row;
+    padding: 10px;  
+}
+
+.footer1-1-1 {
+    margin: 10px;
+    max-width: 400px;  
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.footer1-1-1 img {
+    width: 100%;  
+    height: auto;  
+    max-width: 100%;  
+}
+
+.footer1-1-1 ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.footer1-1-1 ul a {
+    color: #a8a8a8;
+    margin: 0 25px;
+}
+
+.footer1-2 {
+    margin-left: auto;  
+    display: flex;
+    align-items: center;
+}
+
+.footer1-2 ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.footer1-2 li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    margin: 10px;
+}
+.footer2{
+    background-color: rgb(37, 37, 37);
+    justify-content: center;
+text-align: center;
+color: #a8a8a8;
+}
+
+@media (max-width: 850px) {
+    .footer1 {
+        flex-direction: column;  
+        align-items: center;  
+        padding: 5px;  
+    }
+
+    .footer1-1-1 {
+        width: 100%;  
+        max-width: 100%;  
+    }
+    .footer1-1-1 ul {
+    flex-wrap: wrap;
+}
+
+    .footer1-2 {
+        margin-left: 0;  
+    }
+}
+
+
+</style>
+
+<div class="footer1">
+    <div class="footer1-1-1">
+        <a class="fa" href="../index.html">
+            <img src="../svg/logo.svg" alt="Descripción de la imagen">
+        </a>
+        <ul>
+            
+                <li><a href="../donate.html">[Donate]</a></li>
+            
+                <li><a href="../resources.html">[Resources]</a></li>
+            
+                <li><a href="../faq.html">[FAQ]</a></li>
+            
+                <li><a href="../index.xml">[RSS]</a></li>
+            
+        </ul>
+    </div>
+
+
+    <div class="footer1-2">
+        <ul>
+            
+                <li>
+                    <a href="../arweave/new-interactive-self-sovereign-video-site.html">
+                        
+                            <img src="../svg/arweave-logo.png" alt="Questions? Groups for SimpleX, Session, XMPP" style="width: 35px; height: auto; vertical-align: middle;" />
+                                    
+                    </a>
+                </li>        
+            
+                <li>
+                    <a href="https://bastyon.com/SimplifiedPrivacy">
+                        
+                            <img src="../svg/basyton.svg" alt="Questions? Groups for SimpleX, Session, XMPP" style="width: 35px; height: auto; vertical-align: middle;" />
+                                    
+                    </a>
+                </li>        
+            
+                <li>
+                    <a href="https://primal.net/npub14slk4lshtylkrqg9z0dvng09gn58h88frvnax7uga3v0h25szj4qzjt5d6">
+                        
+                            <img src="../svg/nostr.svg" alt="Questions? Groups for SimpleX, Session, XMPP" style="width: 35px; height: auto; vertical-align: middle;" />
+                                    
+                    </a>
+                </li>        
+            
+                <li>
+                    <a href="../uncensored/index.html">
+                        
+                            <img src="../svg/session.svg" alt="Questions? Groups for SimpleX, Session, XMPP" style="width: 35px; height: auto; vertical-align: middle;" />
+                                    
+                    </a>
+                </li>        
+            
+                <li>
+                    <a href="../contact/signal.html">
+                        
+                            <img src="../svg/signal.svg" alt="Questions? Groups for SimpleX, Session, XMPP" style="width: 35px; height: auto; vertical-align: middle;" />
+                                    
+                    </a>
+                </li>        
+            
+                <li>
+                    <a href="../contact/simplex.html">
+                        
+                            <img src="../svg/simplex.svg" alt="Questions? Groups for SimpleX, Session, XMPP" style="width: 35px; height: auto; vertical-align: middle;" />
+                                    
+                    </a>
+                </li>        
+            
+                <li>
+                    <a href="../contact/xmpp.html">
+                        
+                            <img src="../svg/xmpp.svg" alt="Questions? Groups for SimpleX, Session, XMPP" style="width: 35px; height: auto; vertical-align: middle;" />
+                                    
+                    </a>
+                </li>        
+            
+        </ul>
+    </div>
+</div>
+<div class="footer2">
+        <small><b>Designed by Zenaku, SP Director of Art</b></small>
+</div>
+
+
+
+  </footer>
+</body>
+</html>

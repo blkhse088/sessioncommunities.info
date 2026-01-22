@@ -1,0 +1,22 @@
+; server-wide overrides
+
+[66666666]
+rating=nsfw
+
+; room overrides
+
+[room+12345678]
+staff_count=4
+safety=nsfw
+
+[room+23456789]
+stickied=true
+
+[room+3456789a]
+feedback_room=true
+
+[test+12345678]
+testing=true
+
+[bad+66666666]
+rating=unsafe

@@ -1,0 +1,11 @@
+@import url("/css/footer.css");
+@import url("/css/common.css");
+
+* { box-sizing: border-box; }
+html { color: var(--primary-color); background-color: var(--secondary-color); font-size: clamp(16px, 2vw, 24px); width: 100%; }
+body { margin: 0; padding: 2rem; width: 100%; line-height: 1.5; }
+
+pre, .code { background-color: var(--secondary-color-shaded); font-size: 0.9rem; white-space: break-spaces; overflow: auto; }
+pre { padding: 1em; }
+.code { padding: 0.1em 0.25em; }
+.hidden { display: none; }
