@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Copy the essential table styling from index.css */
+:root {
+	--cell-padding-v: 0.6em;
+	--cell-padding-h: 0.8em;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 20px;
+}
+
+.tbl_communities__th {
+	white-space: nowrap;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	border-bottom: 2px solid transparent;
+	background-color: #252525;
+	color: hsl(0, 0%, 80%);
+	padding: var(--cell-padding-v) var(--cell-padding-h);
+}
+
+/* Active state when headers are sticking */
+.tbl_communities__th:is(:position(sticky)) {
+	border-bottom-color: #ffffff;
+}
+
+/* Fallback for browsers that don't support :is() */
+.tbl_communities__th.sticky-active {
+	border-bottom-color: #ffffff;
+}
+
+.tbl_communities td {
+	padding: var(--cell-padding-v) var(--cell-padding-h);
+	border: 1px solid #444;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+/* Demo content to enable scrolling */
+.container {
+	height: 200px;
+	overflow-y: auto;
+	border: 1px solid #666;
+}
+</style>
+</head>
+<body>
+<script>
+// Copy sticky header functionality from main.js
+function addStickyHeaderHandler() {
+	const table = document.getElementById('tbl_communities');
+	if (!table) return;
+
+	const headers = table.querySelectorAll('thead .tbl_communities__th');
+	
+	if (headers.length === 0) return;
+
+	// Use Intersection Observer to detect when headers become sticky
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.remove('sticky-active');
+			} else {
+				entry.target.classList.add('sticky-active');
+			}
+		});
+	}, { threshold: [0, 1] });
+
+	headers.forEach(header => {
+		observer.observe(header);
+	});
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', addStickyHeaderHandler);
+</script>
+<h2>Sticky Table Header Test</h2>
+<p>Scroll down in the box below - the table headers should stick to the top and show a white bottom border when sticky.</p>
+
+<div class="container">
+<table id="tbl_communities">
+	<thead>
+		<tr>
+			<th class="tbl_communities__th">Language</th>
+			<th class="tbl_communities__th">Name</th>
+			<th class="tbl_communities__th">Description</th>
+			<th class="tbl_communities__th">Users</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td>🇺🇸</td><td>Test Community 1</td><td>This is a test community for sticky headers</td><td>100</td></tr>
+		<tr><td>🇬🇧</td><td>Test Community 2</td><td>Another test community to verify scrolling</td><td>250</td></tr>
+		<tr><td>🇩🇪</td><td>Test Community 3</td><td>Third test for comprehensive verification</td><td>150</td></tr>
+		<tr><td>🇫🇷</td><td>Test Community 4</td><td>Fourth test to ensure proper behavior</td><td>75</td></tr>
+		<tr><td>🇯🇵</td><td>Test Community 5</td><td>Fifth test for complete validation</td><td>300</td></tr>
+		<tr><td>🇨🇦</td><td>Test Community 6</td><td>Sixth test to verify all aspects</td><td>180</td></tr>
+		<tr><td>🇦🇺</td><td>Test Community 7</td><td>Seventh test for final confirmation</td><td>220</td></tr>
+		<tr><td>🇮🇹</td><td>Test Community 8</td><td>Eighth test for thorough testing</td><td>95</td></tr>
+	</tbody>
+</table>
+</div>
+
+</body>
+</html>

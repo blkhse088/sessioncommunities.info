@@ -37,9 +37,9 @@ let shownCommunityId = "";
  */
 const transformJoinURL = () => {
 	return element.button({
-		textContent: "Copy",
+		textContent: "COPY",
 		className: "copy_button",
-		title: "Click here to copy the join URL",
+		title: "Click here to copy the join link",
 		onclick: function () {
 			if (!(this instanceof HTMLButtonElement)) throw new Error("Not a button");
 			copyToClipboard(
@@ -148,6 +148,7 @@ async function onLoad() {
 	createJoinLinkUI();
 	markSortableColumns();
 	addQRModalHandlers();
+	addStickyHeaderHandler();
 	preloadImages();
 	setInterval(() => {
 		preloadImages();
@@ -865,6 +866,34 @@ function sortTable(column) {
 	rows.sort(compare);
 	replaceRowsWith(rows.map(({row}) => row));
 	setSortState(table, { ascending, column: sortedColumn });
+}
+
+/**
+ * Add sticky header functionality for table headers.
+ * Handles browsers that don't support :is(:position(sticky)) selector
+ */
+function addStickyHeaderHandler() {
+	const table = dom.tbl_communities();
+	if (!table) return;
+
+	const headers = table.querySelectorAll('thead .tbl_communities__th');
+	
+	if (headers.length === 0) return;
+
+	// Use Intersection Observer to detect when headers become sticky
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.remove('sticky-active');
+			} else {
+				entry.target.classList.add('sticky-active');
+			}
+		});
+	}, { threshold: [0, 1] });
+
+	headers.forEach(header => {
+		observer.observe(header);
+	});
 }
 
 // `html.js` selector for styling purposes

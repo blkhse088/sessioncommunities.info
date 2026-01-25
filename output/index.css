@@ -381,6 +381,20 @@ div.search-actions {
 /* Cells in general */
 .tbl_communities__th {
 	white-space: nowrap;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	border-bottom: 2px solid transparent;
+}
+
+/* Active state when headers are sticking */
+.tbl_communities__th:is(:position(sticky)) {
+	border-bottom-color: #ffffff;
+}
+
+/* Fallback for browsers that don't support :is() */
+.tbl_communities__th.sticky-active {
+	border-bottom-color: #ffffff;
 }
 
 .tbl_communities__th, #tbl_communities > tbody > tr > td {
@@ -388,7 +402,9 @@ div.search-actions {
 }
 
 .tbl_communities__th.sortable {
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 	padding-right: calc( 1.35em + var(--cell-padding-h) );
 }
 

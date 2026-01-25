@@ -250,8 +250,6 @@ export const DETAILS_LINK_PASTE = "Copied link to Community details.";
 
 export const communityQRCodeURL = (communityID) => `/qr-codes/${communityID}.png`;
 
-export const communityQRCodeURL = (communityID) => `/qr-codes/${communityID}.png`
-
 export const COLUMN = {
 	LANGUAGE:     0,  NAME:         1,
 	DESCRIPTION:  2,  USERS:        3,  PREVIEW:      4,

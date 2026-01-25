@@ -39,14 +39,16 @@
 	?>
 
 	<table id="tbl_communities">
-		<tr>
+		<thead>
+			<tr>
 <?php foreach ($TABLE_COLUMNS as $column): ?>
-			<th <?=sort_onclick($column)?> id="th_<?=$column['id']?>" class="tbl_communities__th">
-				<?=$column['name']?>
+				<th <?=sort_onclick($column)?> id="th_<?=$column['id']?>" class="tbl_communities__th">
+					<?=$column['name']?>
 
-			</th>
+				</th>
 <?php endforeach; ?>
-		</tr>
+			</tr>
+		</thead>
 <?php renderCommunityRoomTableFragment($rooms); ?>
 	</table>
 <?php
