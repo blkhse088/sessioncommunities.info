@@ -437,6 +437,7 @@ div.search-actions {
 .tbl_communities__th {
 	background-color: #252525;
 	color: hsl(0, 0%, 80%);
+	border-bottom: 2px solid hsl(0, 0%, 80%);
 }
 
 .room-row {
